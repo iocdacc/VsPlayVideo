@@ -13,6 +13,16 @@ export default {
         scrollLeft = document.body.scrollLeft + document.documentElement.scrollLeft;
         return left - scrollLeft;
     },
+    topDistance: function(el) {
+        let Top = el.offsetTop;
+        let scrollTop;
+        while (el.offsetParent) {
+            el = el.offsetParent;
+            Top += el.offsetTop;
+        }
+        scrollTop = document.body.scrollTop + document.documentElement.scrollTop;
+        return Top - scrollTop;
+    },
     timeFormat: function(time) {
         let tempMin = parseInt(time / 60);
         let tempSec = parseInt(time % 60);
@@ -60,6 +70,27 @@ export default {
                 //el.onclick(event, handlers[event]);
                 el.onclick = handlers[event];
             }
+        }
+    },
+    //进入全屏
+    FullScreen: function (ele) {
+        if (ele.requestFullscreen) {
+            return ele.requestFullscreen();
+        } else if (ele .mozRequestFullScreen) {
+            return ele.mozRequestFullScreen();
+        } else if (ele .webkitRequestFullScreen) {
+            return ele.webkitRequestFullScreen();
+        }
+    },
+    //退出全屏
+    exitFullscreen: function (){
+        let de = document;
+        if (de.exitFullscreen) {
+            de.exitFullscreen();
+        } else if (de.mozCancelFullScreen) {
+            de.mozCancelFullScreen();
+        } else if (de.webkitCancelFullScreen) {
+            de.webkitCancelFullScreen();
         }
     }
 };

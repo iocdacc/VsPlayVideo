@@ -1,6 +1,6 @@
 export default {
     defaultOption: {
-        element: "vsPlayAudio",
+        element: "vsPlayVideo",
         autoPlay: false,
         music: {
             //必需项,音乐配置
@@ -30,10 +30,16 @@ export default {
             coverUl: element + "-ul",
             coverVolume: element + "-volume",
             coverVolumeLine: element + "-volume-line",
+            coverVolumeText: element + "-volume-text",
             coverMenuIcon: element + "-menu-icon",
             coverVolumeIcon: element + "-volume-icon",
             coverRandomIcon: element + "-random-icon",
-            coverList: "." + element + "-list"
+            coverList: "." + element + "-list",
+            full: element + "-full",
+            speedBtn: "." + element + "-speed-btn",
+            video: element + "-video",
+            pendantPlay: "." + element + "-pendant-play",
+
         }
     }
 }
