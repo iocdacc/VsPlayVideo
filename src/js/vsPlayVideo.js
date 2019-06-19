@@ -34,7 +34,7 @@ class vsPlayVideo{
         this.v.style.height = '100%';
         this.v.style.backgroundColor = '#333';
         this.v.controls = false;
-        this.v.src = "https://www.runoob.com/try/demo_source/movie.ogg";
+        this.v.src = this.vsOption.src;
         
         //依赖注入
         injector.register("vsOption", this.vsOption);

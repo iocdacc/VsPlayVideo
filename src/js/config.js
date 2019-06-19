@@ -2,17 +2,8 @@ export default {
     defaultOption: {
         element: "vsPlayVideo",
         autoPlay: false,
-        music: {
-            //必需项,音乐配置
-            type: 'cloud',
-            //必需项,网易云方式指定填'cloud'
-            source: ''
-            //必需项,网易云音乐歌单id
-            //登录网易云网页版,在网页地址中拿到
-            // ... playlist?id=2778782119
-        },
         random: false,
-        baseUrl: 'http://120.79.36.48/'
+        src:''
     },
     dom: (element) => {
         return {
