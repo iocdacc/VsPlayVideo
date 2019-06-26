@@ -30,9 +30,6 @@ class vsPlayVideo{
 
         //创建音频对象
         this.v = document.getElementById(this.dom.video)
-        this.v.style.width = '100%';
-        this.v.style.height = '100%';
-        this.v.style.backgroundColor = '#333';
         this.v.controls = false;
         this.v.src = this.vsOption.src;
         

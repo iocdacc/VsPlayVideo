@@ -30,6 +30,10 @@
 }
 #vsPlayVideo video{
     cursor: pointer;
+    width: 100%;
+    height: 0px;
+    flex-grow: 1;
+    background-color: #333;
 }
 #vsPlayVideo .vsPlayVideo-menu{
     display: -webkit-box;
@@ -48,6 +52,7 @@
     zoom: 1;
     position: relative;
     color: #99a2aa;
+    flex-shrink: 0;
 }
 
 #vsPlayVideo .vsPlayVideo-menu-hover:hover{
