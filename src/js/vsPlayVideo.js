@@ -22,7 +22,7 @@ class vsPlayVideo{
         //document.getElementById(this.vsOption.element).appendChild(this.v);
         
         //载入模版
-        //document.getElementById(this.vsOption.element).innerHTML = template.body;
+        document.getElementById(this.vsOption.element).innerHTML = template.body;
         
         //获取DOM
         this.dom = config.dom(this.vsOption.element);
@@ -45,6 +45,10 @@ class vsPlayVideo{
 
         //初始化
         this.init();
+
+        this.play = this.af.play.bind(this.af);
+        this.pause = this.af.pause.bind(this.af);
+        this.full = this.af.full.bind(this.af)
     }
 
     init(){
