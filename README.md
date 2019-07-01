@@ -13,7 +13,7 @@ Video player
 http://demo.iocdacc.com/vsPlayAudio
 
 ## 使用方法
-```
+```html
 <head>
 
 <script src="./dist/vsPlayVideo.min.js"></script>
@@ -27,8 +27,10 @@ http://demo.iocdacc.com/vsPlayAudio
 
 ...
 
+<script>
 var player = new vsPlayVideo({
     src:"https://www.runoob.com/try/demo_source/movie.ogg"
 });
+</script>
 </body>
 ```
