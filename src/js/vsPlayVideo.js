@@ -88,6 +88,10 @@ class vsPlayVideo{
             document.querySelectorAll(this.dom.pendantPlay)[0].style.display = "none";
         }
 
+        this.v.oncanplaythrough = () => {
+            this.af.time()
+        }
+
         //播放结束时的事件
         this.v.onended = () => {
             this.af.pause();

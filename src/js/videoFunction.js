@@ -41,19 +41,23 @@ class videoFunction{
         }
     }
 
+    time() {
+        document.getElementById(this.dom.time).innerHTML = this.tool.timeFormat(this.v.currentTime) + " / " + this.tool.timeFormat(this.v.duration)
+    }
+
     barStart() {
-        let num;
-        let buff;
+        let num
+        let buff
         //更新进度条和时间
         this.bars = this.bars ? this.bars : (setInterval(() => {
             if (this.v.readyState && this.v.buffered.end(0) > 0) {
-                num = this.v.currentTime / this.v.duration;
-                buff = this.v.buffered.end(0) / this.v.duration;
-                document.getElementById(this.dom.barNow).style.width = Number(num * 100).toFixed(2) + "%";
-                document.getElementById(this.dom.barLoading).style.width = Number(buff * 100).toFixed(2) + "%";
-                document.getElementById(this.dom.time).innerHTML = this.tool.timeFormat(this.v.currentTime) + " / " + this.tool.timeFormat(this.v.duration);
+                time()
+                num = this.v.currentTime / this.v.duration
+                buff = this.v.buffered.end(0) / this.v.duration
+                document.getElementById(this.dom.barNow).style.width = Number(num * 100).toFixed(2) + "%"
+                document.getElementById(this.dom.barLoading).style.width = Number(buff * 100).toFixed(2) + "%"
             }
-        }, 10));
+        }, 10))
     }
 
     barStop() {
