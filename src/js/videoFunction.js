@@ -51,7 +51,7 @@ class videoFunction{
         //更新进度条和时间
         this.bars = this.bars ? this.bars : (setInterval(() => {
             if (this.v.readyState && this.v.buffered.end(0) > 0) {
-                time()
+                this.time()
                 num = this.v.currentTime / this.v.duration
                 buff = this.v.buffered.end(0) / this.v.duration
                 document.getElementById(this.dom.barNow).style.width = Number(num * 100).toFixed(2) + "%"
