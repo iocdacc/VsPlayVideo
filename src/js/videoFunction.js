@@ -53,7 +53,13 @@ class videoFunction{
             if (this.v.readyState && this.v.buffered.end(0) > 0) {
                 this.time()
                 num = this.v.currentTime / this.v.duration
-                buff = this.v.buffered.end(0) / this.v.duration
+
+                for (let index = 0; index < this.v.buffered.length; index++) {
+                    if (this.v.buffered.start(index) < this.v.currentTime && this.v.currentTime < this.v.buffered.end(index)) {
+                        buff = this.v.buffered.end(index) / this.v.duration
+                    }
+                }
+
                 document.getElementById(this.dom.barNow).style.width = Number(num * 100).toFixed(2) + "%"
                 document.getElementById(this.dom.barLoading).style.width = Number(buff * 100).toFixed(2) + "%"
             }
