@@ -28,9 +28,9 @@ http://demo.iocdacc.com/vsPlayAudio
 ...
 
 <script>
-var player = new vsPlayVideo({
-    src:"https://www.runoob.com/try/demo_source/movie.ogg"
-});
+    var player = new vsPlayVideo({
+        src:"https://www.runoob.com/try/demo_source/movie.ogg"
+    });
 </script>
 </body>
 ```
