@@ -1,6 +1,6 @@
 # vsPlayVideo
 
-美观的音乐播放器
+美观的视频播放器
 Video player
 
 ## 简介
@@ -10,7 +10,7 @@ Video player
 
 ## 演示地址
 
-http://demo.iocdacc.com/vsPlayAudio
+http://demo.iocdacc.com/vsPlayVideo
 
 ## 使用方法
 ```html
