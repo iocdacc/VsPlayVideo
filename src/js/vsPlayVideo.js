@@ -101,5 +101,4 @@ class vsPlayVideo{
     }
 }
 
-
-module.exports = vsPlayVideo;
+export default vsPlayVideo;

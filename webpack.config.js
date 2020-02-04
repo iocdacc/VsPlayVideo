@@ -6,8 +6,9 @@ module.exports = {
   output: {
     filename: 'vsPlayVideo.min.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'vsPlayVideo',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    libraryExport: "default",
+    library: 'vsPlayVideo'
   },
   devServer: {
     contentBase: './'
