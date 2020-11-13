@@ -1,4 +1,4 @@
-# vsPlayVideo
+# VsPlayVideo
 
 美观的视频播放器
 Video player
