@@ -10,7 +10,7 @@ Video player
 
 ## 演示地址
 
-https://iocdacc.github.io/vsPlayVideo
+https://iocdacc.github.io/VsPlayVideo/
 
 ## 使用方法
 ```html
